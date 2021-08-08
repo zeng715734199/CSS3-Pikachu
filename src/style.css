@@ -260,7 +260,7 @@ html {
   z-index: 1;
 }
 
-@keyframes wave {
+@-webkit-keyframes wave {
   0% {
     transform: rotate(0deg);
   }
@@ -274,7 +274,7 @@ html {
     transform: rotate(0deg);
   }
 }
-@keyframes ear_left {
+@-webkit-keyframes ear_left {
   0% {
     transform: rotate(-26deg) skewX(25deg) skewY(0deg);
   }
@@ -285,7 +285,7 @@ html {
     transform: rotate(-26deg) skewX(25deg) skewY(0deg);
   }
 }
-@keyframes ear_right {
+@-webkit-keyframes ear_right {
   0% {
     transform: rotate(139deg) skewX(25deg) skewY(0deg);
   }
@@ -304,7 +304,7 @@ html {
   /* animation */
   animation: ear_right 2s infinite linear 0s;
 }
-@keyframes eyeMove {
+@-webkit-keyframes eyeMove {
   0%,
   100% {
     top: 2px;
@@ -330,7 +330,7 @@ html {
     left: 15px;
   }
 }
-@keyframes cheekMove {
+@-webkit-keyframes cheekMove {
   0%,
   46%,
   54%,

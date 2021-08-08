@@ -192,7 +192,7 @@ const string = `
 }
 
 /* 添加动画 */
-@keyframes wave {
+@-webkit-keyframes wave {
   0% {
     transform: rotate(0deg);
   }
@@ -207,7 +207,7 @@ const string = `
   }
 }
 
-@keyframes eyeMove{
+@-webkit-keyframes eyeMove{
   0%,100%{
     top:2px;
     left:2px;
@@ -230,7 +230,7 @@ const string = `
   }
 }
 
-@keyframes cheekMove{
+@-webkit-keyframes cheekMove{
   0%,46%,54%,100%{
     width: 64px;
     height: 64px;
@@ -242,7 +242,7 @@ const string = `
     top: 160px;
   }
 }
-@keyframes mouthMove {
+@-webkit-keyframes mouthMove {
   0%,
   46%,
   54%,
