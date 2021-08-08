@@ -136,6 +136,7 @@ html {
   bottom: -0.2em;
   transform: rotate(26deg);
 }
+/* 画嘴巴 */
 .downMouth {
   position: absolute;
   height: 180px;
@@ -156,6 +157,7 @@ html {
   overflow: hidden;
   animation: mouthMove 3s infinite;
 }
+/* 添加舌头 */
 .downMouth .round2 {
   border: 3px solid #000;
   position: absolute;
