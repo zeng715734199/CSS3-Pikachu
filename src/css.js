@@ -207,7 +207,7 @@ const string = `
   }
 }
 
-@-webkit-keyframes eyeMove{
+@keyframes eyeMove{
   0%,100%{
     top:2px;
     left:2px;
@@ -230,7 +230,7 @@ const string = `
   }
 }
 
-@-webkit-keyframes cheekMove{
+@keyframes cheekMove{
   0%,46%,54%,100%{
     width: 64px;
     height: 64px;
