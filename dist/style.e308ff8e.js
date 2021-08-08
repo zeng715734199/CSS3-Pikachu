@@ -117,89 +117,79 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"css.js":[function(require,module,exports) {
-"use strict";
+})({"../../../../AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var string = "\n/* css reset */\n* {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n}\n*::before,\n*::after {\n  box-sizing: border-box;\n}\n/* \u8BBE\u7F6E\u76AE\u80A4 */\n.skin {\n  background: rgb(255, 230, 0);\n  width: 100%;\n  height: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.wrapper {\n  position: relative;\n  top: 0;\n  width: 400px;\n  height: 400px;\n  overflow: hidden;\n}\n/* \u6765\u753B\u4E00\u4E2A\u9F3B\u5B50 */\n.nose {\n  border: 9px solid black;\n  border-color: black transparent transparent;\n  border-bottom: none;\n  width: 0px;\n  height: 0px;\n  position: absolute;\n  left: 50%;\n  top: 107px;\n  margin-left: -9px;\n  z-index: 2;\n  transform-origin: 50% 100%;\n  animation: wave 300ms infinite linear;\n}\n.sector {\n  position: absolute;\n  width: 18px;\n  height: 5px;\n  background: black;\n  bottom: 9px;\n  left: -9px;\n  border-radius: 12px 12px 0 0;\n}\n/* \u63A5\u7740\u753B\u4E00\u4E2A\u773C\u775B */\n.eyes {\n  border: 2px solid #000;\n  min-width: 50px;\n  min-height: 50px;\n  position: absolute;\n  top: 70px;\n  border-radius: 50%;\n  background: #2e2e2e;\n  z-index: 2;\n}\n.eyes.Left {\n  left: 50%;\n  margin-left: -25px;\n  transform: translateX(-90px);\n}\n.eyes.Right {\n  right: 50%;\n  margin-right: -25px;\n  transform: translateX(90px);\n}\n.eyes.Left::before,\n.eyes.Right::before {\n  content: \"\";\n  display: block;\n  border: 3px solid #000;\n  width: 23px;\n  height: 23px;\n  background: white;\n  border-radius: 50%;\n  position: absolute;\n  left: 9px;\n  top: 0px;\n  animation:eyeMove 3s infinite;\n}\n/* \u753B\u5634\u5DF4\uFF0C\u5634\u5DF4\u662F\u7531\u4E24\u4E2A\u692D\u5706\u7EC4\u6210\u7684 */\n.mouth {\n  height: 200px;\n  width: 160px;\n  position: relative;\n  left: 50%;\n  top: 125px;\n  margin-left: -80px;\n  overflow: hidden;\n  z-index: 2;\n}\n.upMouth {\n  position: relative;\n}\n/* \u753B\u4E0A\u5634\u5507 */\n.lip {\n  position: absolute;\n  height: 38px;\n  width: 80px;\n  border: 3px solid #000;\n  border-top-color: transparent;\n  background: rgb(255, 230, 0);\n  z-index: 1;\n}\n.lip.Left {\n  border-radius: 0 0 0 40px;\n  border-left-color: transparent;\n  transform: rotateZ(-30deg);\n}\n.lip.Left::before {\n  content: \"\";\n  display: block;\n  height: 35px;\n  width: 6px;\n  position: absolute;\n  background: rgb(255, 230, 0);\n  right: -5px;\n}\n.lip.Right {\n  right: 0;\n  border-radius: 0 0 40px 0;\n  border-right-color: transparent;\n  transform: rotate(30deg);\n}\n.lip.Right::after {\n  content: \"\";\n  display: block;\n  height: 35px;\n  width: 12px;\n  position: absolute;\n  background: rgb(255, 230, 0);\n  left: -0.37em;\n  bottom: -0.2em;\n  transform: rotate(26deg);\n}\n.downMouth {\n  position: absolute;\n  height: 180px;\n  top: 12px;\n  width: 100%;\n  overflow: hidden;\n}\n.downMouth .round1 {\n  border: 3px solid #000;\n  position: absolute;\n  height: 273px;\n  width: 130px;\n  left: 50%;\n  top: -110px;\n  margin-left: -65px;\n  border-radius: 100px/200px;\n  background: rgb(204, 65, 67);\n  overflow: hidden;\n  animation: mouthMove 3s infinite;\n}\n.downMouth .round2 {\n  border: 3px solid #000;\n  position: absolute;\n  top: 145px;\n  left: 50%;\n  height: 135px;\n  width: 130px;\n  border-radius: 120px/100px;\n  margin-left: -65px;\n  background: rgb(221, 102, 106);\n}\n/* \u753B\u4E00\u5BF9\u8138\u86CB */\n.face {\n  position: absolute;\n  top: 140px;\n  left: 50%;\n  border: 3px solid #000;\n  height: 64px;\n  width: 64px;\n  margin-left: -32px;\n  border-radius: 50%;\n  background: rgb(255, 0, 0);\n  z-index: 2;\n  animation: cheekMove 3s infinite;\n}\n.face.Left {\n  transform: translateX(-150px);\n}\n.face.Right {\n  transform: translateX(150px);\n}\n\n/* \u6DFB\u52A0\u52A8\u753B */\n@keyframes wave {\n  0% {\n    transform: rotate(0deg);\n  }\n  33% {\n    transform: rotate(5deg);\n  }\n  66% {\n    transform: rotate(-5deg);\n  }\n  100% {\n    transform: rotate(0deg);\n  }\n}\n\n@-webkit-keyframes eyeMove{\n  0%,100%{\n    top:2px;\n    left:2px;\n  }\n  30%,60%,70%{\n    top: 0;\n    left: 15px;\n  }\n  40%{\n    top: 0;\n    left: 15px;\n  }\n  50%{\n    top: 0;\n    left: 10px;\n  }\n  80%,90%{\n    top: 17px;\n    left: 15px;\n  }\n}\n\n@-webkit-keyframes cheekMove{\n  0%,46%,54%,100%{\n    width: 64px;\n    height: 64px;\n    top: 140px;\n  }\n  50%{\n    width: 50px;\n    height: 50px;\n    top: 160px;\n  }\n}\n@keyframes mouthMove {\n  0%,\n  46%,\n  54%,\n  100% {\n    height: 273px;\n  }\n  50% {\n    height: 100px;\n  }\n}\n";
-var _default = string;
-exports.default = _default;
-},{}],"test.js":[function(require,module,exports) {
-"use strict";
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
+  }
 
-var _css = _interopRequireDefault(require("./css.js"));
+  return bundleURL;
+}
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
 
-var player = {
-  n: 1,
-  time: 100,
-  id: undefined,
-  ui: {
-    demo: document.querySelector("#demo"),
-    demo2: document.querySelector("#demo2")
-  },
-  init: function init() {
-    player.ui.demo.innerText = _css.default.substr(0, player.n);
-    player.ui.demo2.innerHTML = _css.default.substr(0, player.n);
-    player.bindEvents();
-    player.play();
-  },
-  events: {
-    "#btnPause": "pause",
-    "#btnPlay": "play",
-    "#btnSlow": "slow",
-    "#btnNormal": "normal",
-    "#btnFast": "fast"
-  },
-  bindEvents: function bindEvents() {
-    for (var key in player.events) {
-      if (player.events.hasOwnProperty(key)) {
-        var value = player.events[key];
-        document.querySelector(key).onclick = player[value];
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
+  }
+
+  return '/';
+}
+
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)?\/[^/]+(?:\?.*)?$/, '$1') + '/';
+}
+
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"../../../../AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+
+function updateLink(link) {
+  var newLink = link.cloneNode();
+
+  newLink.onload = function () {
+    link.remove();
+  };
+
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+
+var cssTimeout = null;
+
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
       }
     }
-  },
-  run: function run() {
-    player.n += 1;
 
-    if (player.n > _css.default.length) {
-      window.clearInterval(player.id);
-      return;
-    }
+    cssTimeout = null;
+  }, 50);
+}
 
-    console.log(player.n + ":" + "string:" + _css.default.substr(0, player.n));
-    player.ui.demo.innerText = _css.default.substr(0, player.n);
-    player.ui.demo2.innerHTML = _css.default.substr(0, player.n);
-    player.ui.demo.scrollTop = player.ui.demo.scrollHeight;
-  },
-  play: function play() {
-    player.id = setInterval(player.run, player.time);
-  },
-  pause: function pause() {
-    window.clearInterval(player.id);
-  },
-  slow: function slow() {
-    player.pause();
-    player.time = 300;
-    player.play();
-  },
-  normal: function normal() {
-    player.pause();
-    player.time = 100;
-    player.play();
-  },
-  fast: function fast() {
-    player.pause();
-    player.time = 0;
-    player.play();
-  }
-};
-player.init();
-},{"./css.js":"css.js"}],"../../../../AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+module.exports = reloadCSS;
+},{"./bundle-url":"../../../../AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"style.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"../../../../AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../../AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -227,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61668" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64744" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -403,5 +393,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","test.js"], null)
-//# sourceMappingURL=/test.e98b79dd.js.map
+},{}]},{},["../../../../AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
+//# sourceMappingURL=/style.e308ff8e.js.map
